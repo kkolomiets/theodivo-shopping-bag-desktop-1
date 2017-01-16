@@ -140,15 +140,29 @@ $(function() {
 
 		smallHeightMode();
 
+		// var toSmallSize = false;
+		// var toBigSize
+
+		var	makeOneColumn = function() {
+			if ($(window).width() <= 483) {
+	  			$( ".tosbm_frame" ).height($('#tosbm_frame > ul > li').first().outerHeight());
+
+	  			// console.log($(window).width());
+	  			// toSmallSize = true;
+	  		} else {
+	  			$( ".tosbm_frame" ).height('auto');
+	  		}
+		}
 		$( window ).resize(function() {
 			smallHeightMode();
 	  		shoppingBagSly.reload();
 	  		// console.log("window resize is");
 
-	  		if ($(window).width() < 500) {
-	  			$( ".tosbm_frame" ).height($('.tosbm_slidee li').first().outerHeight());
-	  		}
+		    makeOneColumn();
+		});
 
+		shoppingBagSly.on('load', function (eventName) {
+			makeOneColumn();
 		});
 
 	  		// if ($(window).width() < 500) {
