@@ -144,9 +144,17 @@ $(function() {
 			smallHeightMode();
 	  		shoppingBagSly.reload();
 	  		// console.log("window resize is");
+
+	  		if ($(window).width() < 500) {
+	  			$( ".tosbm_frame" ).height($('.tosbm_slidee li').first().outerHeight());
+	  		}
+
 		});
 
-
+	  		// if ($(window).width() < 500) {
+	  		// 	$( "</li><li>" ).insertBefore( ".tosbm_item-block:nth-of-type(2)" );
+	  		// }
+	  		// shoppingBagSly.reload();
 		// $('#tosbm_frame').scroll(function(e) {
 		// 	console.log(e.originalEvent.touches[0].clientY);
 		// 	console.log("sdsd");
