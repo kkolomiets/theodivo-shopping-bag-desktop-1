@@ -3,12 +3,13 @@
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	}
 	.tosbm_content {
-		max-width: 1000px;
+		max-width: 940px;
 		height: 500px;
+		padding-right: 30px;
 		&.empty {
 		}
 		.tosbm_items-block {
-			width: 60%;
+			width: 62%;
 			display: inline-block;
 			.tosbm_item-block {
 				width: 50%;
@@ -33,7 +34,9 @@
 			}
 		}
 		.tosbm_total-block {
-			width: 30%;
+			// width: 30%;
+			width: ~"-webkit-calc(38% - 60px)";
+			width: ~"calc(38% - 60px)";
 			position: relative;
 			display: inline-block;
 			float: right;
